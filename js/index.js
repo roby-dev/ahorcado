@@ -58,7 +58,7 @@ const verifyLetter = () => {
     const letter  = letterInput.value;
 	console.log(letter);    
     for(const i in key){
-        if (letter == key[i]) {			
+        if (letter.toUpperCase() == key[i].toUpperCase()) {			
             letterInput.value = '';
             encryptedKey = encryptedKey.replaceAt(i*2,letter);
             word.innerHTML = encryptedKey;            
