@@ -55,10 +55,10 @@ console.log(key);
 word.innerHTML = encryptedKey;
 
 const verifyLetter = () => {
-    const letter  = letterInput.value;
+    const letter  = letterInput.value.toLowerCase();
 	console.log(letter);    
     for(const i in key){
-        if (letter.toUpperCase() == key[i].toUpperCase()) {			
+        if (letter == key[i]) {			
             letterInput.value = '';
             encryptedKey = encryptedKey.replaceAt(i*2,letter);
             word.innerHTML = encryptedKey;            
